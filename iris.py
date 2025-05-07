@@ -30,14 +30,14 @@ pl = st.number_input("Petal Length", min_value=0.0, step=0.1)
 pw = st.number_input("Petal Width", min_value=0.0, step=0.1)
 
 
-if st.button("Predict"):
+if st.button("Classify"):
     data = [[float(sl), float(sw), float(pl), float(pw)]]
     result = model.predict(data)
     result = int(round(result[0]))
 
     if result == 0:
-        st.write("Prediction: Iris-setosa")
+        st.write("Iris-setosa")
     elif result == 1:
-        st.write("Prediction: Iris-versicolor")
+        st.write("Iris-versicolor")
     else:
-        st.write("Prediction: Iris-virginica")
+        st.write("Iris-virginica")
